@@ -66,7 +66,7 @@ function mostrarSeccion() {
     if(tabAnterior) {
         tabAnterior.classList.remove('actual');
     }
-   
+
     // Resalta el Tab Actual
     const tab = document.querySelector(`[data-paso="${pagina}"]`);
     tab.classList.add('actual');
@@ -134,9 +134,9 @@ async function mostrarServicios() {
 
 
 function seleccionarServicio(e) {
-    
+
     let elemento;
-    // Forzar que el  elemento al cual le damos click sea el DIV 
+    // Forzar que el  elemento al cual le damos click sea el DIV
     if(e.target.tagName === 'P') {
         elemento = e.target.parentElement;
     } else {
@@ -237,7 +237,7 @@ function mostrarResumen() {
         resumenDiv.appendChild(noServicios);
 
         return;
-    } 
+    }
 
     const headingCita = document.createElement('H3');
     headingCita.textContent = 'Resumen de Cita';
@@ -356,7 +356,7 @@ function fechaCita() {
     fechaInput.addEventListener('input', e => {
 
         const dia = new Date(e.target.value).getUTCDay();
-        
+
         if([0, 6].includes(dia)) {
             e.preventDefault();
             fechaInput.value = '';
